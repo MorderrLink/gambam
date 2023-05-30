@@ -25,18 +25,18 @@ SECRET_KEY = 'django-insecure-qaq90w#rr!oz_*%5=et_l8tu_$+#t#dj2cgej#tlv3+zo0+yut
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, '/templates')
-STATICFILE_DIR = os.path.join(BASE_DIR, '/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '/static')
 
 MY_STATICFILE_FOLDER = os.path.join(BASE_DIR, '/mainapp/static')
 
 
-STATICFILE_DIRS = [STATICFILE_DIR, MY_STATICFILE_FOLDER]
+STATICFILE_DIRS = [STATIC_ROOT, MY_STATICFILE_FOLDER]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
